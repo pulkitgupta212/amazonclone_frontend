@@ -1,0 +1,72 @@
+.link {
+    font-size: 18px;
+    margin: 5%;
+  }
+  
+  .link:hover {
+    color: #FF9900;
+    text-decoration: underline;
+  }
+  
+  
+  .carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .carousel-img {
+    min-width: 100vw;
+    height: 750px;
+    object-fit: cover;
+  }
+  
+  .card {
+    width: 350px;
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: 1px solid; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px
+
+  }
+  
+  .card-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  
+  .card-category {
+    width: 50%;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    top: 450px;
+    padding-left: 35px;
+    padding-right: 20px;
+    width: 98vw;
+    gap: 15px;
+  
+  }
+
+  .cardhead{
+    height: 100px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  #cardhead{
+    height: 70px;
+    font-size: 25px;
+    font-weight: bold;
+  }
