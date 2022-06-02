@@ -6,11 +6,11 @@
   import Signup from './Pages/Signup/signup';
 //import Cart from './Component/cart';
 //import Cart from './Component/cart';
-//import ShoppingCart from './Component/Shopping';
 //import History from './Pages/History/history';
-//import Product from './Pages/Product/product';
+import Product from './Pages/Product/product';
+import ShoppingCart from './Component/Shopping';
 //import Cardshow from './component/cardshow';
-//import Cart from './component/cart';
+
 
 
 
@@ -29,6 +29,12 @@ const routes = useRoutes([
   },
   {
     path:'/login1',element:<Login1/>
+  },
+  {
+    path:'/product',element:<Product/>
+  },
+  {
+    path:'/shoppingCart',element:<ShoppingCart/>
   }
 ])
 

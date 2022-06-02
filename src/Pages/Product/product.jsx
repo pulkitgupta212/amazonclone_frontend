@@ -2,14 +2,19 @@
 import Footer from '../../Component/Fotter'
 import Header from '../../Component/Headers/header';
 import { Button, Cascader, Checkbox } from 'antd';
+import { useLocation } from 'react-router-dom';
 import {  EnvironmentOutlined, SecurityScanFilled, StarFilled, UploadOutlined } from '@ant-design/icons';
 // import Magiczoomplus from './zoom/magiczoomplus';
 // import { decrease, increase } from '.././../Redux/actions'
 // import { useDispatch } from 'react-redux';
 
 
-export default function Product() {
-
+export default function Product(props) {
+   
+    // const took = useLocation();
+    const {state}=useLocation();
+     console.log(state.img1)
+     
     const options = [
         {
             value: '1',
@@ -39,7 +44,7 @@ export default function Product() {
                  <div style={{ height: '100vh', minHeight: '100%', width: '100%', display: 'flex', flexWrap: "wrap", marginBottom: '100px' }}>
                     <div style={{ display: 'flex', flexDirection: 'row', height: '100%px' }}>
                         {/* <a href="https://m.media-amazon.com/images/I/51tBWuuWJ7L._SX466_.jpg" class="MagicZoom"><img src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/PCQC2/1x-PC-QC-phil4._SY116_CB622582897_.jpg" /></a> */}
-                        <div style={{ position: 'relative' }}>   <img src="	https://m.media-amazon.com/images/I/811tZvMZUhL._UX695_.jpg"
+                        <div style={{ position: 'relative' }}>   <img src={state.img1}
                             style={{ height: '380px', width: '380px', alignItems: 'center', marginBottom: '30px', marginTop: '30px', marginLeft: '60px' }} alt='img' />
                             <div style={{ margin: '30px 390px', padding: '10px', fontSize: '25px', position: 'absolute', display: 'flex', justifyContent: 'end', borderRadius: '50%', border: '1px solid #ddd' }}><UploadOutlined /></div>
                             <div style={{ position: 'absolute', display: 'flex', flexDirection: 'column', margin: '50px 20px', gap: '10px' }}>
@@ -120,7 +125,7 @@ export default function Product() {
            <Cascader options={options}  onChange={handleChange} style={{ width:'20%', padding:'0' }} defaultValue='1' changeOnSelect id='set' />
                                    </p>
                                     <div>
-                                        <p ><Button  href='./cart'  style={{ fontWeight: '500', width: '240px', height: '38px', borderRadius: '20px', background: '#face2f' }}>Add to Cart</Button></p>
+                                        <p ><Button  href='./shoppingCart'  style={{ fontWeight: '500', width: '240px', height: '38px', borderRadius: '20px', background: '#face2f' }}>Add to Cart</Button></p>
                                         <p ><Button style={{ fontWeight: '500', width: '240px', height: '38px', borderRadius: '20px', background: '#faa22f' }}>Buy Now</Button></p></div>
                                     <p><SecurityScanFilled /> Secure transaction
                                         <p style={{ borderBottom: '1px solid #ddd' }}>

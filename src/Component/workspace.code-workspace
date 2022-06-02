@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "../../../amazon_backend"
+			"path": "../.."
 		},
 		{
-			"path": "../.."
+			"path": "../../../amazon_backend"
 		}
 	],
 	"settings": {}

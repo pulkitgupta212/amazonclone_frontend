@@ -14,6 +14,7 @@ function ShoppingCart({cart,removeFromCart}) {
     return (
         <>
         <Header/>
+        <div style={{overflow:"auto",height:"100vh"}}>
         <Header1/>
         <div style={{height:"auto"}}> 
         <div className="checkout">
@@ -63,6 +64,7 @@ return <div className="checkoutProduct" key={item.id}>
         </div>
 
         <Footer/>
+        </div>
    </>
     )
     

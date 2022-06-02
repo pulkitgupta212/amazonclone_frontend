@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 //import data from '../books.json';
 import "../Css/cardview.css";
 //import Carouselss from './carosuel';
@@ -8,6 +8,7 @@ import axios from "axios";
 
 function Cardview() {
   const [data1, setData1] = useState([]);
+  const nav=useNavigate();
   
   const postt = async () => {
     return await axios.get("https://amazonclonebackend212.herokuapp.com/single_card");
@@ -31,6 +32,12 @@ function Cardview() {
     });
   }, []);
 
+  const handleClick=()=>{
+    nav('product')
+  
+
+  }
+
   return (
     <>
       <div style={{display:"flex",justifyContent:"space-evenly", flexWrap:"wrap",gap:"20px"}} className="cards">
@@ -38,7 +45,7 @@ function Cardview() {
           if (id <= data1.length)
             return (
               <>
-                <div  style={{height: "420px",
+                <div onClick={()=>{ nav('/product',{state:val})}} style={{height: "420px",
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-evenly",
@@ -47,7 +54,7 @@ function Cardview() {
     
                   <h1  style={{textAlign:"center"}} className="cardhead">{val.title}</h1>
                   <div style={{ height: "180px", width: "230px",objectFit:"contain",margin:"auto" }}>
-                    <img style={{height:"130%",width:"100%"}}
+                    <img  style={{height:"130%",width:"100%"}}
                       src={val.img1}
                       alt="Comics Category"
                       className="card-content"
